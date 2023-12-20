@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.cdnfonts.com/css/new-walt-disney-font" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Shrikhand' rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/fc13291877fa0c0e6e6d614326699903?family=Kepler+W03+Light+SCd+Cp" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/ba57058827.js" crossorigin="anonymous"></script>
+    <title>Yabsera Benyam</title>
+    <link rel="icon" href="tab.png" type="image/png">
+    <style>
+        #details{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+       <nav>
+         <a href="index.html">
+        <div class="logo"> <img src="logo.png"></div>
+    </a>
+        <ul class="nav-list">
+            <a href="index.html">
+            <li>HOME</li>
+        </a>
+              <a href="leadership.html">
+            <li>INVOLVEMENT</li>
+        </a>
+              <a href="about.html">
+            <li>ABOUT</li>
+        </a>
+              <a href="yabserabenyam.pdf">
+            <li>RESUME</li>
+        </a>
+        </ul>
+    </nav>
+    <section id="details">
+        <div>
+            <span>Disney is for </span>
+            <span id="typed-text"></span>
+               <p> A dream, personal passion, and values<p>
+        </div>
+    </section>
+
+
+
+<div class="two-column-layout">
+  <div class="column" id="column1">
+    <h2>Agenda</h2>
+    <p id="item1" data-content="Content for Item 1">Why Disney?</p>
+    <p id="item2" data-content="Content for Item 2">Why the position</p>
+    <p id="item3" data-content="Content for Item 3">What I will contribute</p>
+    
+    <!-- Add more items as needed -->
+  </div>
+  <div class="column" id="column2">
+    <p id="contentArea">Click an item on the left to see content here.</p>
+  </div>
+</div>
+
+
+<script>
+  document.querySelectorAll('.item').forEach(item => {
+    item.addEventListener('click', function() {
+      const content = this.getAttribute('data-content');
+      document.getElementById('contentArea').textContent = content;
+    });
+  });
+</script>
+
+    <!-- JavaScript to create sparkles -->
+    <script>
+        function getRandomHorizontalOffset(max) {
+            return Math.floor(Math.random() * max) - max / 2;
+        }
+
+        document.addEventListener('mousemove', function(e) {
+            var sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+
+            var offsetX = getRandomHorizontalOffset(30); // Max offset in pixels horizontally
+
+            sparkle.style.left = (e.pageX + offsetX) + 'px';
+            sparkle.style.top = e.pageY + 'px';
+
+            document.body.appendChild(sparkle);
+
+            setTimeout(function() {
+                sparkle.style.opacity = '1';
+                setTimeout(function() {
+                    sparkle.style.opacity = '0';
+                    setTimeout(function() {
+                        document.body.removeChild(sparkle);
+                    }, 1000); // Adjusted removal time for a longer-lasting trail
+                }, 200); // Adjusted opacity transition time
+            }, 0);
+        });
+    </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function updateItemContent(itemNumber) {
+        const contentArea = document.getElementById('contentArea');
+        
+        let contentHtml = '';
+        switch (itemNumber) {
+            case 'item1':
+                contentHtml = `
+                             <div id="item2-content">
+                        <h2>Why Disney?</h2>
+                        <div id="slides-container">
+                            <div class="slide">
+                             <img id="castle" src="castle.jpeg" alt="Description of first image for item 2">
+                             <img id="poppins" src="poppins.gif" alt="Description of first image for item 2">
+                             <img id="mickey" src="mickey.jpeg" alt="Description of first image for item 2">
+                                <p> My enthusiasm for Disney extends beyond my genuine passion for the entertainment elements and experiences. It's rooted in the company's commitment to storytelling that transcends entertainment, embodying inspiration, family values, and the journey of discovering identity. This aligns with my own belief in the transformative power of stories and their role in society. <br> <br> I see Disney's stories as more than just tales; they are life lessons wrapped in engaging narratives. They teach us about courage, kindness, the importance of dreams, and the strength of being true to oneself. These tales become tools for personal growth and social change. </p>
+                            </div>
+                            <div class="slide">
+                              <img class="environment" src="emission.png" alt="Description of second image for item 2">
+                              <img class="environment" src="water.png" alt="Description of second image for item 2">
+                              <img class="environment" src="waste.png" alt="Description of second image for item 2">
+                              <img class="environment" src="materials.png" alt="Description of second image for item 2">
+                              <img class="environment" src="design.png" alt="Description of second image for item 2">
+
+                                <p>I am also drawn to Disney’s dedication to sustainability and ethical practices, which are not just corporate responsibilities but core elements of its business strategy. <br> <br> Disney’s proactive approach outlined in the 2030 Environmental Goals focuses on reducing emissions, water stewardship, and waste management, reflecting a forward-thinking commitment to a sustainable future, a vision that I have supported throughout my life. I appreciate the approach to water conservation with plans to implement localized watershed strategies and source sustainable seafood. It reflects my mindset of sustainability, in my cooking, in my purchasing, and even in my creativity!</p>
+                            </div>
+                            <div class="slide">
+                              <img id="spiderman" src="spiderman.jpg" alt="Description of second image for item 2">
+                                <p>From a young age, I have been captivated by Disney's imaginative worlds, which have not only brought joy and wonder into my life but also shaped my understanding of creativity and innovation. This creativity resonates deeper with Disney’s dedication to inclusive worlds and authentic stories. This extends to the workforce, content, and community outreach which ensures that stories are accessible to all communities and resonate with people from diverse backgrounds. <br> <br> It would be an amazing opportunity to be part of an organization that not only aligns with my professional goals but also resonates with my personal values and interests! </p>
+                            </div>
+                        </div>
+                        <img src="next.png" alt="Next" id="next-slide" class="slideshow-button">
+                        <!-- Add previous button if needed -->
+                    </div>
+                `;
+                break;
+            case 'item2':
+                contentHtml = `
+                    <div class="item3-content">
+                        <h2>Item 3 Title</h2>
+                        <p>Item 3 description...</p>
+                        <img src="image3-1.png" alt="First image for item 3">
+                        <img src="image3-2.png" alt="Second image for item 3">
+                    </div>
+
+
+                `;
+                break;
+            case 'item3':
+                contentHtml = `
+                    <div class="item6-content">
+                        <h2>What I will contribute</h2>
+                        <div class="bring">
+                         <h3> Data & Customer Mindset</h3>
+                        <img id="love" src="graph.png" alt="Second image for item 6">
+                        <ul>
+                        <li>I can use advanced analytics to understand customer behaviors and preferences, leading to informed decision-making that is customer centered</li>
+                        <li>I aim to not just implementfeedback, but actively listen and respond. I am dedicated to turning it into a meaningful conversation and actionable change</li>
+                        </div>
+
+                        <div class="bring">
+                        <h3> Passion</h3>
+                         <img id="spacing2" src="passion.png" alt="Second image for item 6">
+                        <ul>
+                        <li>I want to work on meaningful projects that are  as accessible as possible and will have an impact on the quality of people's lives </li>
+                        <li>I want to utilize marketing as a tool to convey a mission or intention, and bridge the way between companies and their users</li>
+                        </div>
+
+                        <div class="bring">
+                         <h3>Collaborative Spirit</h3> 
+                          <img id="spacing" src="collab.png" alt="Second image for item 6">
+                        <ul>
+                        <li>I view collaboration as learning. Engaging in open dialogues and collective problem solving is an incredible way to gain new insights</li>
+                        <li>I emphasize fostering strong, genuine relationships within teams and respecting diverse perspectives to create an inclusive environment </li>
+                        </div>
+                    </div>
+                `;
+                break;
+            case 'item4':
+                contentHtml = `
+                    
+                `;
+                break;
+            case 'item5':
+                contentHtml = `
+                    <div class="item5-content">
+                        <h2>Leadership and Involvement</h2>
+                        <div class="stuff">
+                            <img src="FINAL.png" alt="First image for item 5">
+                            <div class="text-content">
+                                <p>2022  -  2023</p>
+                                <img src="next.png" alt="Next" id="yes" class="slideshow-button">
+                                <h4>VICE PRESIDENT OF COMMUNICATIONS</h4>
+                                <h3>Delta Omicron Zeta</h3>
+                                <h5>USC's first leadership society chapter that focuses on personal and professional development</h5>
+                            </div>
+                        </div>
+
+                        <div class="stuff">
+                            <img src="FINAL2.png" alt="First image for item 5">
+                            <div class="text-content">
+                                <p>2022  -  2023</p>
+                                <img src="next.png" alt="Next" id="yes" class="slideshow-button">
+                                <h4 id="blue">SECRETARY</h4>
+                                <h3>Be The Match</h3>
+                                <h5>USC's chapter of the national organization that connects patients with a matching donor for blood & stem cell transplant</h5>
+                            </div>
+                        </div>
+
+                        <div class="stuff">
+                            <img src="PURPLE.jpeg" alt="First image for item 5">
+                            <div class="text-content">
+                                <p>2021  -  2023</p>
+                                <img src="next.png" alt="Next" id="yes" class="slideshow-button">
+                                <h4 id="purple">CO-FOUNDER</h4>
+                                <h3>Addis Graduates</h3>
+                                <h5>Student run program to help high schoolers in Ethiopia navigate college admissins </h5>
+                            </div>
+                        </div>
+                    </div>
+
+                `;
+                break;
+            case 'item6':
+                contentHtml = `
+                    <div class="item6-content">
+                        <h2>What I will contribute</h2>
+                        <div class="bring">
+                         <h3> Data & Customer Mindset</h3>
+                        <img id="love" src="graph.png" alt="Second image for item 6">
+                        <ul>
+                        <li>I can use advanced analytics to understand customer behaviors and preferences, leading to informed decision-making that is customer centered</li>
+                        <li>I aim to not just implementfeedback, but actively listen and respond. I am dedicated to turning it into a meaningful conversation and actionable change</li>
+                        </div>
+
+                        <div class="bring">
+                        <h3> Passion</h3>
+                         <img id="spacing2" src="passion.png" alt="Second image for item 6">
+                        <ul>
+                        <li>I want to work on meaningful projects that are  as accessible as possible and will have an impact on the quality of people's lives </li>
+                        <li>I want to utilize marketing as a tool to convey a mission or intention, and bridge the way between companies and their users</li>
+                        </div>
+
+                        <div class="bring">
+                         <h3>Collaborative Spirit</h3> 
+                          <img id="spacing" src="collab.png" alt="Second image for item 6">
+                        <ul>
+                        <li>I view collaboration as learning. Engaging in open dialogues and collective problem solving is an incredible way to gain new insights</li>
+                        <li>I emphasize fostering strong, genuine relationships within teams and respecting diverse perspectives to create an inclusive environment </li>
+                        </div>
+                    </div>
+                `;
+                break;
+        }
+
+        contentArea.innerHTML = contentHtml;
+        setActiveClass(document.getElementById(itemNumber));
+
+        // START OF NEW ADDITION
+       if (itemNumber === 'item1') {
+              let currentSlideIndex = 0;
+              const slides = document.querySelectorAll('#item2-content .slide');
+              const totalSlides = slides.length;
+
+              const nextButton = document.getElementById('next-slide');
+              // If you have a previous button, get it similarly
+
+              // Initially hide all slides except the first
+              slides.forEach((slide, index) => {
+                  slide.style.display = (index === 0) ? 'block' : 'none';
+              });
+
+              nextButton.addEventListener('click', function() {
+                  slides[currentSlideIndex].style.display = 'none';
+                  currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+                  slides[currentSlideIndex].style.display = 'block';
+              });
+
+              // Add similar logic for the previous button if you have one
+          }
+        // END OF NEW ADDITION
+
+    }
+
+    function setActiveClass(clickedItem) {
+        const allItems = document.querySelectorAll('.column p');
+        allItems.forEach(i => i.classList.remove('active'));
+        clickedItem.classList.add('active');
+    }
+
+    // Add the following two lines to automatically display the "About Me" section on page load
+        updateItemContent('item1');
+        setActiveClass(document.getElementById('item1'));
+
+        // ... event listeners for your items ...
+        document.getElementById('item1').addEventListener('click', function() {
+            updateItemContent('item1');
+        });
+        document.getElementById('item2').addEventListener('click', function() {
+            updateItemContent('item2');
+        });
+        // ... other event listeners for items ...
+
+
+    document.getElementById('item1').addEventListener('click', function() {
+        updateItemContent('item1');
+    });
+    document.getElementById('item2').addEventListener('click', function() {
+        updateItemContent('item2');
+    });
+    document.getElementById('item3').addEventListener('click', function() {
+        updateItemContent('item3');
+    });
+    document.getElementById('item4').addEventListener('click', function() {
+        updateItemContent('item4');
+    });
+    document.getElementById('item5').addEventListener('click', function() {
+        updateItemContent('item5');
+    });
+    document.getElementById('item6').addEventListener('click', function() {
+        updateItemContent('item6');
+    });
+});
+
+</script>
+
+
+
+
+
+
+<div id="footer">
+  <section class="social-icons">
+        <a href="mailto:benyam@usc.edu"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/yabsera-benyam" target="_blank"><i class="fa fa-linkedin"></i></a>
+        <a href="tel:+12407880380"><i class="fa fa-phone"></i></a>
+  </section>
+</div>
+
+<script>
+        // Add event listeners to contact items for the click-to-copy functionality
+        document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const content = this.getAttribute('data-content');
+                navigator.clipboard.writeText(content).then(() => {
+                    alert("Copied to clipboard: " + content);
+                }).catch(err => {
+                    console.error('Could not copy text: ', err);
+                });
+            });
+        });
+    </script>
+
+ 
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+<script>
+var typed = new Typed('#typed-text', {
+  strings: ["me","my family", "the world"],
+  typeSpeed: 50,
+  backSpeed: 50,
+  loop: true
+});
+</script>
+
+<script>
+  document.querySelectorAll('h2 span').forEach(span => {
+    span.addEventListener('mouseover', () => {
+        span.style.color = 'red'; // Change to your desired hover color
+    });
+
+    span.addEventListener('mouseout', () => {
+        span.style.color = ''; // Revert to the original color
+    });
+  });
+</script>
+
+<script>
+    document.getElementById('mainImage').addEventListener('click', function() {
+        var hiddenImages = document.getElementById('hiddenImages');
+        if (hiddenImages.style.display === "block") {
+            hiddenImages.style.display = "none";
+        } else {
+            hiddenImages.style.display = "block";
+        }
+    });
+</script>
+
+
+</body>
+</html>

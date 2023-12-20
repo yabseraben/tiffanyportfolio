@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/tt-norms-pro" rel="stylesheet">
+<title>Social Media Usage Spectrum</title>
+<style>
+  body {
+    background-color: black;
+    margin: 0 auto;
+    padding: 100px;
+    color: white;
+      font-family: TT Norms Pro, sans-serif;
+  }
+
+  .usage-spectrum {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .category {
+    flex: 1;
+    background-color: black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 0 10px;
+    box-sizing: border-box;
+  }
+
+  .platform img {
+    width: 75px; /* Or the size of your icons */
+    height: 70px;
+    margin-right: 10px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    color: #000;
+    border-bottom: 2px solid #000;
+  }
+
+   ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .pro, .con {
+    margin: 5px 0;
+    padding-left: 35px; /* Make room for the bullet image */
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px; /* Size of the bullet image */
+  }
+
+  .pro {
+    background-image: url('yummy.png');
+  }
+
+  .con {
+    background-image: url('exes.png');
+  }
+
+  li {
+    margin: 5px 0;
+    font-size: 19px;
+    font-weight: 2;
+    line-height: 30px;
+  }
+
+  .pro {
+    color: white;
+  }
+
+  .con {
+    color: white;
+  }
+
+  P{
+    font-size: 21PX;
+    font-weight: lighter;
+    margin-bottom: 20px;
+  }
+
+  #lol{
+    text-align: right;
+
+    padding-right: 65px;
+  }
+
+  #no{
+    text-align: center;
+    padding-right: 28px;
+ 
+  }
+
+  #ohyeah{
+    margin-left: 10px;
+  }
+
+
+</style>
+</head>
+<body>
+
+<div class="usage-spectrum">
+  <div class="category">
+    <h2>Most used</h2>
+    <div class="platform">
+      <div id="ohyeah">
+      <img src="purell.png" alt="Instagram">
+      <img src="germ.png" alt="BeReal">
+      <p>Purell  ●  Germ-X</p>
+          </div>
+      <ul>
+        <li class="pro">High alcohol content for effective sanitization</li>
+        <li class="pro">Contains moisturizers to prevent skin dryness</li>
+        <li class="con">Higher price point compared to other brands</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Somewhat used</h2>
+    <div class="platform">
+      <div id="no">
+      <img src="dialy.jpeg" alt="Slack">
+      <img src="babby.jpeg" alt="GroupMe">
+      <p>Dial  ●  Babyganics</p>
+    </div>
+      <ul>
+        <li class="pro">Available in multiple sizes for convenience</li>
+        <li class="pro">Fragrance-free options and kid-friendly and gentle</li>
+        <li class="con">Not eco-friendly</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="category">
+    <h2>Least used</h2>
+    <div class="platform">
+        <div id="lol">
+      <img src="suave.gif" alt="Facebook">
+      <img src="cvs.jpeg" alt="LinkedIn">
+      <p> Suave  ●  CVS Health</p>
+    </div>
+      <ul>
+        <li class="con">Have lower alcohol content </li>
+        <li class="con">Lack of additional skin care ingredients</li>
+        <li class="con">Limited availability and restricted to CVS stores</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
